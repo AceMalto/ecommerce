@@ -6,7 +6,7 @@ const productRoute = require('./routes/productRoutes')
 const app = express()
 app.use(express.json())
 
-app.use('/api/product', productRoute)
+app.use('/api/product', productRoute) // routes
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {   
