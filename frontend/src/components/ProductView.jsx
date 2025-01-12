@@ -1,7 +1,8 @@
 import React from 'react'
 import { LuShoppingCart } from "react-icons/lu";
 import { CiHeart } from "react-icons/ci";
-
+import { SlLike } from "react-icons/sl";
+import { SlDislike } from "react-icons/sl";
 const ProductDescription = () => {
     return (
         <div 
@@ -83,6 +84,49 @@ const ProductDescription = () => {
                             '>
                                 <CiHeart className=' text-2xl'/>
                             </button>
+                        </div>
+
+                        <div className='grid
+                                xz:grid-cols-1
+                                xy:
+                                xx:
+                                xw:
+                                xu:
+                                xt:
+                        '>
+                            {/* naka tab dito & rate */}
+                            <div>
+                                {/* star rating if meron */}
+                            </div>
+                            <div>
+                                <div className='flex space-x-2'>
+                                    <img src="" alt="profile_pic"  className='border rounded-full w-10 h-10'/>
+                                    <div>
+                                        <h1>Name here</h1>
+                                        <p>
+                                            {/* star rate here */}
+                                        </p>
+                                        dapat naka map dito since madami yun mga possible reviews
+                                        <div>
+                                            <span className='flex text-left'>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa explicabo recusandae reprehenderit labore dolores.
+                                            </span>
+                                            <div className=' space-x-12'>
+                                                <button>
+                                                    <SlLike/> {/*  add count like and dislike */}
+                                                </button>
+                                                <button>
+                                                    <SlDislike/>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                {/* suggested products (top 6 search products ) my user like and dapat naka map rin dito  */}
+                            </div>
                         </div>
                     </div>
                 </div>
