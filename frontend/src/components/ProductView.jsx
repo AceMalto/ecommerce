@@ -3,6 +3,8 @@ import { LuShoppingCart } from "react-icons/lu";
 import { CiHeart } from "react-icons/ci";
 import { SlLike } from "react-icons/sl";
 import { SlDislike } from "react-icons/sl";
+import { IoMdArrowBack } from "react-icons/io";
+import Navbar from './Navbar';
 const ProductDescription = () => {
     return (
         <div 
@@ -16,10 +18,16 @@ const ProductDescription = () => {
             '>
             {/* NAV PART */}
             <div >
-                {/* <div> breadcrums when medium screen to large</div> */}
+                {/* <div> add a back arrow when screen turn to mobile screen</div> */}
+                <div className='fixed flex space-x-5'>
+                    <button>
+                        <IoMdArrowBack />
+                    </button>
+                    <Navbar />
+                </div>
                 <div
                     className='grid
-                    xz:grid-cols-1 xz:gap-5
+                    xz:grid-cols-1 xz:gap-5 xz:pt-10
                     xy:
                     xx:
                     xw:
