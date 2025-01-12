@@ -107,25 +107,87 @@ const ProductDescription = () => {
                                             {/* star rate here */}
                                         </p>
                                         dapat naka map dito since madami yun mga possible reviews
-                                        <div>
+                                        <div className='space-y-3'>
                                             <span className='flex text-left'>
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa explicabo recusandae reprehenderit labore dolores.
                                             </span>
-                                            <div className=' space-x-12'>
-                                                <button>
-                                                    <SlLike/> {/*  add count like and dislike */}
+                                            <div className='flex items-center space-x-6'>
+                                                <button className='flex items-center'>
+                                                {/*  add count like and dislike need naka hover para my dating siya kapag ginamit na*/} 
+                                                    <SlLike/>&nbsp;123
                                                 </button>
-                                                <button>
+                                                <button className='flex items-center'>
                                                     <SlDislike/>
                                                 </button>
                                             </div>
+                                            <hr className='border w-full h-0.5 bg-[#a4a4a4]'/>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div>
+                            <div className='grid xz:mt-5 xz:grid-cols-2 gap-1'>
                                 {/* suggested products (top 6 search products ) my user like and dapat naka map rin dito  */}
+                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
+                                    <img src="" alt="product_picture"  className='border h-28'/>
+                                    <h1 className='font-bold xz:text-[10px]'>
+                                        Reebok Classic Leather
+                                    </h1>
+                                    <p className='text-[12px] font-bold'>
+                                        $149.15
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        ⭐ 4.9
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        20k sold
+                                    </p>
+                                </div>                   
+                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
+                                    <img src="" alt="product_picture"  className='border h-28'/>
+                                    <h1 className='font-bold xz:text-[10px]'>
+                                        Reebok Classic Leather
+                                    </h1>
+                                    <p className='text-[12px] font-bold'>
+                                        $149.15
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        ⭐ 4.9
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        20k sold
+                                    </p>
+                                </div>                   
+                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
+                                    <img src="" alt="product_picture"  className='border h-28'/>
+                                    <h1 className='font-bold xz:text-[10px]'>
+                                        Reebok Classic Leather
+                                    </h1>
+                                    <p className='text-[12px] font-bold'>
+                                        $149.15
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        ⭐ 4.9
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        20k sold
+                                    </p>
+                                </div>                   
+                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
+                                    <img src="" alt="product_picture"  className='border h-28'/>
+                                    <h1 className='truncate font-bold xz:text-[10px]'>
+                                        Reebok Classic Leather Sport
+                                    </h1>
+                                    <p className='text-[12px] font-bold'>
+                                        $149.15
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        ⭐ 4.9
+                                    </p>
+                                    <p className='text-[10px] '>
+                                        20k sold
+                                    </p>
+                                </div>                             
                             </div>
                         </div>
                     </div>
