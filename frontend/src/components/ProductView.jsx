@@ -1,208 +1,341 @@
-import React from 'react'
-import { LuShoppingCart } from "react-icons/lu";
-import { CiHeart } from "react-icons/ci";
-import { SlLike } from "react-icons/sl";
-import { SlDislike } from "react-icons/sl";
-import { IoMdArrowBack } from "react-icons/io";
-import Navbar from './Navbar';
-const ProductDescription = () => {
+import React, { useState } from 'react'
+
+const ProductView = () => {
+    const [ activeTab, setActiveTab ] = useState("reviews")
+    
     return (
-        <div 
-            className='w-screen h-screen
-            xz:p-5 border border-black
-            xy:
-            xx:
-            xw:
-            xu:
-            xt:
-            '>
-            {/* NAV PART */}
-            <div >
-                {/* <div> add a back arrow when screen turn to mobile screen</div> */}
-                <div className='fixed flex space-x-5'>
-                    <button>
-                        <IoMdArrowBack />
-                    </button>
-                    <Navbar />
-                </div>
-                <div
-                    className='grid
-                    xz:grid-cols-1 xz:gap-5 xz:pt-10
-                    xy:
-                    xx:
-                    xw:
-                    xu:
-                    xt:
-                    '       
-                >
-                    <div 
-                        className='border border-black w-full
-                            xz:h-96
-                            xy:
-                            xx:
-                            xw:
-                            xu:
-                            xt:
-                        '
-                    >
-                        {/* images here and more picture */}
-                        asdsa
+        <div className='md:px-5 lg:px-14'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-5 lg:gap-12 md:pt-28 lg:pt-32'>
+                <div className=''>
+                    <div className='border h-80 rounded-md shadow-lg'>
+                    
                     </div>
-                    <div className='xz:space-y-2'>
-                        {/* description here */}
-                        <div className='flex items-center xz:justify-between'>
-                            <h1 className='text-[15px] font-medium'>Reebok</h1>
-                            <span className=' text-[#a4a4a4] text-[13px]'>HR132ROO-8</span>
+                    <div className='flex flex-row space-x-2 mt-3.5 overflow-auto'>
+                    {/* use .map here since multiple card ProductView */}
+                        <div className='border w-20 aspect-square flex-shrink-0 rounded-md shadow-lg'>
+                            a
                         </div>
-                        
-                        <div>
-                            <h1 className=' font-medium xz:text-lg'>Shoes Reebok Zig Kinetica 3</h1>
-                            {/* reviews for product */}
-
-                        </div>
-
-                        <div>
-                            <h1 className=' text-3xl font-medium'>
-                                $199.00
+                    </div>
+                </div>
+                <div className=''>
+                    <div className='flex justify-between items-center mb-2'> 
+                        <div className='flex items-center gap-2 '>
+                            <img src="" alt=""  className='rounded-full w-9 aspect-square border'/>
+                            <h1>
+                                Reebok
                             </h1>
                         </div>
-
                         <div>
-                            {/* variant color etc. */}
-                        </div>
-                        
-                        <div className='flex space-x-2'>
-                            <button className='flex justify-center items-center text-sm text-white border border-[#010101] bg-[#010101]
-                                xz:py-2 xz:px-3 xz:w-full rounded-lg
-                                xy:
-                                xx:
-                                xw:
-                                xu:
-                                xt:
-                            '>
-                                <LuShoppingCart />&nbsp;&nbsp;Add to cart
-                            </button>
-                            <button className='  border bg-[#a4a4a4]
-                                xz:py-2 xz:px-3 rounded-lg
-                                xy:
-                                xx:
-                                xw:
-                                xu:
-                                xt:
-                            '>
-                                <CiHeart className=' text-2xl'/>
-                            </button>
-                        </div>
-
-                        <div className='grid
-                                xz:grid-cols-1
-                                xy:
-                                xx:
-                                xw:
-                                xu:
-                                xt:
-                        '>
-                            {/* naka tab dito & rate */}
-                            <div>
-                                {/* star rating if meron */}
-                            </div>
-                            <div>
-                                <div className='flex space-x-2'>
-                                    <img src="" alt="profile_pic"  className='border rounded-full w-10 h-10'/>
-                                    <div>
-                                        <h1>Name here</h1>
-                                        <p>
-                                            {/* star rate here */}
-                                        </p>
-                                        dapat naka map dito since madami yun mga possible reviews
-                                        <div className='space-y-3'>
-                                            <span className='flex text-left'>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsa explicabo recusandae reprehenderit labore dolores.
-                                            </span>
-                                            <div className='flex items-center space-x-6'>
-                                                <button className='flex items-center'>
-                                                {/*  add count like and dislike need naka hover para my dating siya kapag ginamit na*/} 
-                                                    <SlLike/>&nbsp;123
-                                                </button>
-                                                <button className='flex items-center'>
-                                                    <SlDislike/>
-                                                </button>
-                                            </div>
-                                            <hr className='border w-full h-0.5 bg-[#a4a4a4]'/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className='grid xz:mt-5 xz:grid-cols-2 gap-1'>
-                                {/* suggested products (top 6 search products ) my user like and dapat naka map rin dito  */}
-                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
-                                    <img src="" alt="product_picture"  className='border h-28'/>
-                                    <h1 className='font-bold xz:text-[10px]'>
-                                        Reebok Classic Leather
-                                    </h1>
-                                    <p className='text-[12px] font-bold'>
-                                        $149.15
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        ⭐ 4.9
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        20k sold
-                                    </p>
-                                </div>                   
-                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
-                                    <img src="" alt="product_picture"  className='border h-28'/>
-                                    <h1 className='font-bold xz:text-[10px]'>
-                                        Reebok Classic Leather
-                                    </h1>
-                                    <p className='text-[12px] font-bold'>
-                                        $149.15
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        ⭐ 4.9
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        20k sold
-                                    </p>
-                                </div>                   
-                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
-                                    <img src="" alt="product_picture"  className='border h-28'/>
-                                    <h1 className='font-bold xz:text-[10px]'>
-                                        Reebok Classic Leather
-                                    </h1>
-                                    <p className='text-[12px] font-bold'>
-                                        $149.15
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        ⭐ 4.9
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        20k sold
-                                    </p>
-                                </div>                   
-                                <div className='space-y-1.5 py-5 px-3 rounded-md h-56 bg-[#f2f0ea]'>
-                                    <img src="" alt="product_picture"  className='border h-28'/>
-                                    <h1 className='truncate font-bold xz:text-[10px]'>
-                                        Reebok Classic Leather Sport
-                                    </h1>
-                                    <p className='text-[12px] font-bold'>
-                                        $149.15
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        ⭐ 4.9
-                                    </p>
-                                    <p className='text-[10px] '>
-                                        20k sold
-                                    </p>
-                                </div>                             
-                            </div>
+                            <p className='text-gray-400'>product code</p>
                         </div>
                     </div>
+                    <div>
+                        <h1 className='text-xl font-medium'>Shoes Reebok Zig Kinetica 3</h1>
+                        <span className=' text-xs text-gray-400'>⭐⭐⭐⭐⭐ | 42 reviews</span>
+                    </div>
+
+                    <div className=' mt-1'>
+                        <h1 className='text-3xl font-semibold'>$199.00</h1>
+                    </div>
+
+                    <form action="">
+                        {/* variation of the production */}
+                        <div className='flex flex-col space-y-1'>
+                            {/* dito sa part na to dapat my selection if what type of products is that */}
+                            <h1 className=' text-xs mt-5'>Color</h1>
+                            
+                            <div className='flex flex-wrap gap-1 h-16'>
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                    type="radio"
+                                    name="color"
+                                    value="green"
+                                    class="peer hidden"
+                                    />
+                                    <span class="w-6 h-6 rounded-full border border-gray-300 peer-checked:bg-green-500"></span>
+                                    <span class="text-gray-700">Green</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                    type="radio"
+                                    name="color"
+                                    value="green"
+                                    class="peer hidden"
+                                    />
+                                    <span class="w-6 h-6 rounded-full border border-gray-300 peer-checked:bg-green-500"></span>
+                                    <span class="text-gray-700">Green</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                    type="radio"
+                                    name="color"
+                                    value="green"
+                                    class="peer hidden"
+                                    />
+                                    <span class="w-6 h-6 rounded-full border border-gray-300 peer-checked:bg-green-500"></span>
+                                    <span class="text-gray-700">Green</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                    type="radio"
+                                    name="color"
+                                    value="green"
+                                    class="peer hidden"
+                                    />
+                                    <span class="w-6 h-6 rounded-full border border-gray-300 peer-checked:bg-green-500"></span>
+                                    <span class="text-gray-700">Green</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                    type="radio"
+                                    name="color"
+                                    value="green"
+                                    class="peer hidden"
+                                    />
+                                    <span class="w-6 h-6 rounded-full border border-gray-300 peer-checked:bg-green-500"></span>
+                                    <span class="text-gray-700">Green</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input
+                                    type="radio"
+                                    name="color"
+                                    value="green"
+                                    class="peer hidden"
+                                    />
+                                    <span class="w-6 h-6 rounded-full border border-gray-300 peer-checked:bg-green-500"></span>
+                                    <span class="text-gray-700">Green</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-col space-y-1'>
+                            {/* dito sa part na to dapat my selection if what type of products is that */}
+                            <h1 className=' text-xs mt-5'>Size</h1>
+                            
+                            <div className='flex flex-wrap items-center gap-1 h-20'>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input
+                                    type="radio"
+                                    name="box-radio"
+                                    value="option2"
+                                    class="peer hidden"
+                                    />
+                                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-lg peer-checked:bg-blue-500 peer-checked:text-white peer-checked:border-blue-600">
+                                        41
+                                    </div>
+                                </label>
+                                
+                            </div>
+                        </div>
+
+                        <div className='flex gap-2 mt-3'>
+                            <button className='border bg-black text-white w-full rounded-lg shadow-md'>
+                                Add to cart
+                            </button>
+                            <button className='border w-12 h-10 rounded-lg shadow-md'>
+                                💖
+                            </button>
+                        </div>
+                    </form>
                 </div>
+            </div>
+            <div className='pt-5 space-x-2'>
+                <button onClick={() => setActiveTab("details")} className={`px-3 ${
+                    activeTab === "details" ? "font-bold" : ""}`}>
+                    Details
+                </button>
+                <button onClick={() => setActiveTab("reviews")} className={`px-3 ${
+                    activeTab === "reviews" ? "font-bold" : ""}`}>
+                    Reviews
+                </button>
+                <button onClick={() => setActiveTab("discussion")} className={`px-3 ${
+                    activeTab === "discussion" ? "font-bold" : ""}`}>
+                    Discussion
+                </button>
+            </div>
+            <div className='pt-5 w-full'>
+                {
+                    activeTab === "details" && (
+                        <div>
+                            <h2 className="text-lg font-semibold mb-2">Details</h2>
+                            <p>Here are the details of the item.</p>
+                        </div>
+                    )
+                }
+                {
+                    activeTab === "reviews" && (
+                        <div className='grid grid-cols-2 gap-2'>
+                            <div className=''>
+                                <div>
+                                    <div className='flex gap-3'>
+                                        <img src="" alt="" className='w-10 rounded-full aspect-square border'/>
+                                        <div className=''>
+                                            <div className='flex items-center gap-1'>
+                                                <h1 className='text-sm'>John Doe</h1>
+                                                <span className='text-xs text-gray-300'>Yesterday</span>
+                                            </div>
+                                            <span>⭐⭐⭐⭐⭐</span>
+                                        </div>
+                                    </div>
+                                    <div className='py-2'>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, deleniti.</p>
+                                    </div>
+                                    <hr className='w-full h-1'/>
+                                </div>
+                            </div>
+                            <div className=''>
+                                <div className='flex justify-between py-5'>
+                                    <h1>⭐⭐⭐⭐⭐</h1>
+                                    <p>5.0</p>
+                                </div>
+                                <hr className='w-full h-1' />
+                            </div>
+                        </div>
+                    )
+                }
+                {
+                    activeTab === "discussion" && (
+                        <div>
+                            <h2 className="text-lg font-semibold mb-2">Details</h2>
+                            <p>Here are the details of the item.</p>
+                        </div>
+                    )
+                }
             </div>
         </div>
     )
 }
 
-export default ProductDescription
+export default ProductView
