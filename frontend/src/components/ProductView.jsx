@@ -4,8 +4,8 @@ const ProductView = () => {
     const [ activeTab, setActiveTab ] = useState("reviews")
     
     return (
-        <div className='md:px-5 lg:px-14'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-5 lg:gap-12 md:pt-28 lg:pt-32'>
+        <div className='flex-wrap px-5 md:px-5 lg:px-14'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-5 lg:gap-12 pt-16 md:pt-28 lg:pt-32'>
                 <div className=''>
                     <div className='border h-80 rounded-md shadow-lg'>
                     
@@ -17,7 +17,7 @@ const ProductView = () => {
                         </div>
                     </div>
                 </div>
-                <div className=''>
+                <div className='pt-5'>
                     <div className='flex justify-between items-center mb-2'> 
                         <div className='flex items-center gap-2 '>
                             <img src="" alt=""  className='rounded-full w-9 aspect-square border'/>
@@ -26,7 +26,7 @@ const ProductView = () => {
                             </h1>
                         </div>
                         <div>
-                            <p className='text-gray-400'>product code</p>
+                            <p className='text-gray-400 text-xs'>product code</p>
                         </div>
                     </div>
                     <div>
@@ -271,7 +271,7 @@ const ProductView = () => {
                     </form>
                 </div>
             </div>
-            <div className='pt-5 space-x-2'>
+            <div className=' pt-5 space-x-2'>
                 <button onClick={() => setActiveTab("details")} className={`px-3 ${
                     activeTab === "details" ? "font-bold" : ""}`}>
                     Details
@@ -296,7 +296,7 @@ const ProductView = () => {
                 }
                 {
                     activeTab === "reviews" && (
-                        <div className='grid grid-cols-2 gap-2'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2'>
                             <div className=''>
                                 <div>
                                     <div className='flex gap-3'>
@@ -333,6 +333,16 @@ const ProductView = () => {
                         </div>
                     )
                 }
+            </div>
+
+            <div className='pt-5 md:pt-10 lg:pt-10 grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-6'>
+                <div className='border h-52 rounded-md lg:h-60'>
+                    <img src="" alt=""  className='w-full h-36 rounded-md'/>
+                    <div className='text-center pt-2'>
+                        <p className='text-xs md:text-sm lg:text-md xl:text-lg'>Addidas Yeezy Boost</p>
+                        <span className=' font-medium'>$201.50</span>
+                    </div>
+                </div>
             </div>
         </div>
     )
