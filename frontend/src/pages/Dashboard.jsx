@@ -129,7 +129,7 @@ const Dashboard = () => {
             </div> */}
             {/* datagrid for product end */}
             
-            <div className='pt-5'>
+            <div className='pt-5 mb-5'>
                 {/* top sale in municipal start */}
                 <div className='bg-white px-5 py-5 rounded-md border w-full'>
                     <h1 className=' font-medium'>

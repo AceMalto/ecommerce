@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Navbar from "./components/Navbar"
 import Dashboard from "./pages/Dashboard"
 import Footer from "./pages/Footer"
+import AddProducts from "./components/AddProducts"
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Dashboard/>} />
+        <Route path="/" element={<AddProducts/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>
